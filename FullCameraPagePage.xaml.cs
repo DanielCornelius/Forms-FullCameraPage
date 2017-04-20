@@ -11,14 +11,14 @@ namespace FullCameraPage
 			TakePhotoButton.Clicked += TakePhotoButton_Clicked;
 		}
 
-		async void TakePhotoButton_Clicked(object sender, System.EventArgs e)
+		private async void TakePhotoButton_Clicked(object sender, System.EventArgs e)
 		{
 			var cameraPage = new CameraPage();
 			cameraPage.OnPhotoResult += CameraPage_OnPhotoResult;
 			await Navigation.PushModalAsync(cameraPage);
 		}
 
-		async void CameraPage_OnPhotoResult(FullCameraPage.PhotoResultEventArgs result)
+		private async void CameraPage_OnPhotoResult(PhotoResultEventArgs result)
 		{
 			await Navigation.PopModalAsync();
 			if (!result.Success)

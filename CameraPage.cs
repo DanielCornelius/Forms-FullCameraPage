@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace FullCameraPage
@@ -20,12 +18,10 @@ namespace FullCameraPage
 		{
 			OnPhotoResult?.Invoke(new PhotoResultEventArgs());
 		}
-
 	}
 
 	public class PhotoResultEventArgs : EventArgs
 	{
-
 		public PhotoResultEventArgs()
 		{
 			Success = false;
